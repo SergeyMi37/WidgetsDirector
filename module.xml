@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Document name="zapm.ZPM">
+<Module>
+ <Name>zapm</Name>
+  <Version>1.0.55</Version>
+  <Description>Zapm is a shell - extends the zpm shell and adds any other commands.</Description>
+  <Keywords>Extension Package Manager</Keywords>
+  <Author>
+   <Person>Mikhaylenko Sergey</Person>
+   <CopyrightDate>2023</CopyrightDate>
+   <License>MIT</License>
+  </Author>
+  <Packaging>module</Packaging>
+  <SourcesRoot>src</SourcesRoot>
+  <Resource Name="Director.PKG" />
+  <Resource Name="Messages.PKG" />
+  <Resource Name="Operations.PKG" />
+  <Resource Name="Processes.PKG" />
+  <Resource Name="REST.PKG" />
+  <Resource Name="Services.PKG" />
+  <Resource Name="User.PKG" />
+  <Resource Name="WIDGETDIRECTORPKG.PKG" />
+  <Invokes>
+  <!-- <Invoke Class="%ZAPM.ext.zapp" Method="init"></Invoke>-->
+  </Invokes>
+</Module>
+</Document>
+</Export>
