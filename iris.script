@@ -7,11 +7,9 @@ zn "%SYS"
 ;write !,"set ReadOnly=0 "
 ;write db.%Save()
 
-zn "USER"
-
-zn "%sys"
 if $zf(-1,"echo ':!tail /usr/irissys/mgr/messages.log' >> ~/.iris_history")
 
+zn "USER"
 zpm "load /opt/irisapp/ -v":1
 
 halt
