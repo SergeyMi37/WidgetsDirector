@@ -17,9 +17,6 @@
   <Resource Name="Services.PKG" />
   <Resource Name="User.PKG" />
   <Resource Name="WIDGETDIRECTORPKG.PKG" />
-  <Invokes>
-  <!-- <Invoke Class="%ZAPM.ext.zapp" Method="init"></Invoke>-->
-  </Invokes>
 </Module>
 </Document>
 </Export>
