@@ -8,7 +8,7 @@
   <Keywords>sample</Keywords>
   <Packaging>module</Packaging>
   <SourcesRoot>src</SourcesRoot>
-  <SystemRequirements Version=">=2022.1" Interoperability="enabled" />
+  <SystemRequirements Version=">=2023.1" Interoperability="enabled" />
   <Resource Name="Director.PKG" />
   <Resource Name="Messages.PKG" />
   <Resource Name="Operations.PKG" />
