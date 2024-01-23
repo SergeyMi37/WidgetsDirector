@@ -1,7 +1,7 @@
 Class Director.Ticket Extends (%Persistent, %JSON.Adaptor)
 {
 
-Property Keyword As %String(MAXLEN = 200);
+Property Keyword As %String(MAXLEN = 2000);
 
 Property Description As %String(MAXLEN = 10000);
 
@@ -18,6 +18,8 @@ Property ResolveDate As %Date;
 Property ResolveTime As %Time;
 
 Property TicketId As %Integer [ Calculated, SqlComputeCode = { Set {*}={%%ID}}, SqlComputed ];
+
+Property Actions As list Of Director.TicketActions;
 
 Storage Default
 {
@@ -48,6 +50,9 @@ Storage Default
 </Value>
 <Value name="9">
 <Value>ResolveTime</Value>
+</Value>
+<Value name="10">
+<Value>Actions</Value>
 </Value>
 </Data>
 <DataLocation>^Director.TicketD</DataLocation>

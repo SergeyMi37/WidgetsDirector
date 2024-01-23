@@ -14,7 +14,7 @@ Property LanguageURL As %String;
 Method SetupHTTP() As %Net.HttpRequest
 {
 	Set HttpRequest=##class(%Net.HttpRequest).%New()
-    Set HttpRequest.Server="iservice-ss.iscinternal.com"
+    Set HttpRequest.Server="your python microservice"
 	Set HttpRequest.Timeout = 5   
 	Set HttpRequest.Https=0
 	Set HttpRequest.Port=52773
@@ -33,7 +33,7 @@ Method RequestLanguage(pRequest As Messages.LanguageRequest, Output pResponse As
 	Do HttpRequest.EntityBody.Write({"text":(pRequest.textSample)}.%ToJSON())
 	
 	//trigger solr import
-	Set tSC =  HttpRequest.Post("/isvcpython/langdetect")
+	Set tSC =  HttpRequest.Post("/langdetect/")
     If tSC {
         	Set JSONResp=HttpRequest.HttpResponse.Data    
            	Set objResponse = {}.%FromJSON(JSONResp)
