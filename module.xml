@@ -3,20 +3,13 @@
 <Document name="WidgetsDirector.ZPM">
 <Module>
  <Name>WidgetsDirector</Name>
-  <Version>1.0.0</Version>
+  <Version>1.1.0</Version>
   <Description>A sample IRIS Backend app to implement a REST API for a helpdesk</Description>
   <Keywords>sample</Keywords>
   <Packaging>module</Packaging>
   <SourcesRoot>src</SourcesRoot>
   <SystemRequirements Version=">=2023.1" Interoperability="enabled" />
-  <Resource Name="WidgetsDirector.Director.PKG" />
-  <Resource Name="WidgetsDirector.Messages.PKG" />
-  <Resource Name="WidgetsDirector.Operations.PKG" />
-  <Resource Name="WidgetsDirector.Processes.PKG" />
-  <Resource Name="WidgetsDirector.REST.PKG" />
-  <Resource Name="WidgetsDirector.Services.PKG" />
-  <Resource Name="WidgetsDirector.User.PKG" />
-  <Resource Name="WidgetsDirector.WIDGETDIRECTORPKG.PKG" />
+  <Resource Name="WidgetsDirector.PKG" />
 </Module>
 </Document>
 </Export>
