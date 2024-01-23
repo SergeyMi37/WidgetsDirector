@@ -1,4 +1,4 @@
-Class Operations.LanguageIdentify Extends Ens.BusinessOperation
+Class WidgetsDirector.Operations.LanguageIdentify Extends Ens.BusinessOperation
 {
 
 Parameter ADAPTER = "EnsLib.File.OutboundAdapter";
@@ -25,7 +25,7 @@ Method SetupHTTP() As %Net.HttpRequest
 
 Method RequestLanguage(pRequest As Messages.LanguageRequest, Output pResponse As Messages.LanguageResponse) As %Status
 {
-	Set pResponse = ##class(Messages.LanguageResponse).%New()
+	Set pResponse = ##class(WidgetsDirector.Messages.LanguageResponse).%New()
 	//invoke solr data-import
 	Set HttpRequest=..SetupHTTP()
 

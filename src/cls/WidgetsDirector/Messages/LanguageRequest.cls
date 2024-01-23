@@ -1,4 +1,4 @@
-Class Messages.LanguageRequest Extends Ens.Request
+Class WidgetsDirector.Messages.LanguageRequest Extends Ens.Request
 {
 
 Property textSample As %String(MAXLEN = 10000);

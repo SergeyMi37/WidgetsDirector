@@ -1,5 +1,5 @@
 /// 
-Class User.Tickets Extends %DeepSee.CubeDefinition [ DependsOn = Director.Ticket, ProcedureBlock ]
+Class WidgetsDirector.User.Tickets Extends %DeepSee.CubeDefinition [ DependsOn = WidgetsDirector.Director.Ticket, ProcedureBlock ]
 {
 
 /// Cube definition from Architect.

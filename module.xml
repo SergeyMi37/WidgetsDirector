@@ -9,14 +9,14 @@
   <Packaging>module</Packaging>
   <SourcesRoot>src</SourcesRoot>
   <SystemRequirements Version=">=2023.1" Interoperability="enabled" />
-  <Resource Name="Director.PKG" />
-  <Resource Name="Messages.PKG" />
-  <Resource Name="Operations.PKG" />
-  <Resource Name="Processes.PKG" />
-  <Resource Name="REST.PKG" />
-  <Resource Name="Services.PKG" />
-  <Resource Name="User.PKG" />
-  <Resource Name="WIDGETDIRECTORPKG.PKG" />
+  <Resource Name="WidgetsDirector.Director.PKG" />
+  <Resource Name="WidgetsDirector.Messages.PKG" />
+  <Resource Name="WidgetsDirector.Operations.PKG" />
+  <Resource Name="WidgetsDirector.Processes.PKG" />
+  <Resource Name="WidgetsDirector.REST.PKG" />
+  <Resource Name="WidgetsDirector.Services.PKG" />
+  <Resource Name="WidgetsDirector.User.PKG" />
+  <Resource Name="WidgetsDirector.WIDGETDIRECTORPKG.PKG" />
 </Module>
 </Document>
 </Export>

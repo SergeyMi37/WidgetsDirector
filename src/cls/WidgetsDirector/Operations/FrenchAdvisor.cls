@@ -10,7 +10,7 @@ Method UpdateAdvisor(pRequest As Messages.AdvisorUpdate, Output pResponse As Ens
 	
     set ticket = pRequest.ticketId
     set advisor = pRequest.AdvisorId
-    &SQL(UPDATE Director.Ticket set Advisor=:advisor WHERE ID = :ticket)
+    &SQL(UPDATE WidgetsDirector_Director.Ticket set Advisor=:advisor WHERE ID = :ticket)
     
     QUIT $$$OK
 }

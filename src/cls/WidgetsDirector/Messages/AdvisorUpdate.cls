@@ -1,4 +1,4 @@
-Class Messages.AdvisorUpdate Extends Ens.Request
+Class WidgetsDirector.Messages.AdvisorUpdate Extends Ens.Request
 {
 
 Property AdvisorId As %Integer;

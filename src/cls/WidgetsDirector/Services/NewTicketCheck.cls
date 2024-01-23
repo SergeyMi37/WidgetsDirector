@@ -1,4 +1,4 @@
-Class Services.NewTicketCheck Extends Ens.BusinessService
+Class WidgetsDirector.Services.NewTicketCheck Extends Ens.BusinessService
 {
 
 /// Location and Revision of this file in Perforce (Auto-updating)

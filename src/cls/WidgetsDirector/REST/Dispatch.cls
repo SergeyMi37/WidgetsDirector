@@ -1,4 +1,4 @@
-Class REST.Dispatch Extends %CSP.REST
+Class WidgetsDirector.REST.Dispatch Extends %CSP.REST
 {
 
 Parameter CHARSET = "utf-8";
@@ -17,7 +17,7 @@ ClassMethod GetTicket(ticketid As %String) As %Status
 {
     set tSC = $$$OK
     set %response.ContentType="application/json"
-    set ticketObj = ##class(Director.Ticket).%OpenId(ticketid)
+    set ticketObj = ##class(WidgetsDirector.Director.Ticket).%OpenId(ticketid)
     if $ISOBJECT(ticketObj){
         do ticketObj.%JSONExport()
     } else {
@@ -30,7 +30,7 @@ ClassMethod GetTicketSummary() As %Status
 {
     Set tSC = $$$OK
     Set %response.ContentType="application/json"
-    &SQL(DECLARE TicketCurs CURSOR FOR SELECT TOP 100 JSON_OBJECT('TicketId':ID,'Keyword':Keyword,'OpenDate':OpenDate) INTO :ticketJSON FROM Director.Ticket ORDER BY OpenDate DESC)
+    &SQL(DECLARE TicketCurs CURSOR FOR SELECT TOP 100 JSON_OBJECT('TicketId':ID,'Keyword':Keyword,'OpenDate':OpenDate) INTO :ticketJSON FROM WidgetsDirector_Director.Ticket ORDER BY OpenDate DESC)
     &SQL(OPEN TicketCurs)
     set tAry=[] //Start an output array
     FOR    {
@@ -51,7 +51,7 @@ ClassMethod UploadTicket() As %Status
     Set %response.ContentType="application/json"
     Set ticketJSON = %request.Content.Read()
     Set ticketObj   = {}.%FromJSON(ticketJSON)
-    set newTicketObj = ##class(Director.Ticket).%New()
+    set newTicketObj = ##class(WidgetsDirector.Director.Ticket).%New()
     do newTicketObj.%JSONImport(ticketObj)
     
     if (ticketObj.Advisor.ID) do newTicketObj.AdvisorSetObjectId(ticketObj.Advisor.ID)
@@ -71,7 +71,7 @@ ClassMethod GetUserList(staff As %Boolean = 1) As %Status
 {
     Set tSC = $$$OK
     Set %response.ContentType="application/json"
-    &SQL(DECLARE UserCurs CURSOR FOR SELECT TOP 100 JSON_OBJECT('UserId':ID,'Name':Name) INTO :userJSON FROM Director.UserAccount WHERE Staff=:staff)
+    &SQL(DECLARE UserCurs CURSOR FOR SELECT TOP 100 JSON_OBJECT('UserId':ID,'Name':Name) INTO :userJSON FROM WidgetsDirector_Director.UserAccount WHERE Staff=:staff)
     &SQL(OPEN UserCurs)
     
     Set tAry=[] //Start an output array

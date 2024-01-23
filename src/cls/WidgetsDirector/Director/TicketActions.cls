@@ -1,9 +1,9 @@
-Class Director.TicketActions Extends %SerialObject
+Class WidgetsDirector.Director.TicketActions Extends %SerialObject
 {
 
 Property ActionText As %String(MAXLEN = 3000);
 
-Property ActionOwner As Director.UserAccount;
+Property ActionOwner As WidgetsDirector.Director.UserAccount;
 
 Property ActionDate As %Date;
 
@@ -26,7 +26,7 @@ Storage Default
 </Value>
 </Data>
 <State>TicketActionsState</State>
-<StreamLocation>^Director.TicketActionsS</StreamLocation>
+<StreamLocation>^WidgetsDirec149A.TicketActionsS</StreamLocation>
 <Type>%Storage.Serial</Type>
 }
 

@@ -1,4 +1,4 @@
-Class Messages.LanguageResponse Extends Ens.Response
+Class WidgetsDirector.Messages.LanguageResponse Extends Ens.Response
 {
 
 Property languageCode As %String;
