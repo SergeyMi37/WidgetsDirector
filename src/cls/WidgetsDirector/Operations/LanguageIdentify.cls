@@ -23,7 +23,7 @@ Method SetupHTTP() As %Net.HttpRequest
 	Quit HttpRequest
 }
 
-Method RequestLanguage(pRequest As Messages.LanguageRequest, Output pResponse As Messages.LanguageResponse) As %Status
+Method RequestLanguage(pRequest As WidgetsDirector.Messages.LanguageRequest, Output pResponse As WidgetsDirector.Messages.LanguageResponse) As %Status
 {
 	Set pResponse = ##class(WidgetsDirector.Messages.LanguageResponse).%New()
 	//invoke solr data-import
@@ -49,7 +49,7 @@ Method RequestLanguage(pRequest As Messages.LanguageRequest, Output pResponse As
 XData MessageMap
 {
 <MapItems>
-  <MapItem MessageType="Messages.LanguageRequest">
+  <MapItem MessageType="WidgetsDirector.Messages.LanguageRequest">
     <Method>RequestLanguage</Method>
   </MapItem>
 </MapItems>

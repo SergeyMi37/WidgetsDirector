@@ -5,7 +5,7 @@ Class WidgetsDirector.User.Tickets Extends %DeepSee.CubeDefinition [ DependsOn =
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="Tickets" displayName="Tickets" disabled="false" abstract="false" sourceClass="Director.Ticket" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="Tickets" displayName="Tickets" disabled="false" abstract="false" sourceClass="WidgetsDirector.Director.Ticket" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
   <dimension name="Advisor" disabled="false" hasAll="false" allCaption="All Advisor" allDisplayName="Advisor" type="data" hidden="false" showHierarchies="default">
     <hierarchy name="Details" disabled="false" hidden="false">
       <level name="AdvisorId" disabled="false" sourceProperty="Advisor" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="2">
