@@ -1,15 +1,16 @@
-;do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
+    ;do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
 
-zn "%SYS"
+    zn "%SYS"
 
-;Set db=##Class(SYS.Database).%OpenId("irislib")
-;set db.ReadOnly=0
-;write !,"set ReadOnly=0 "
-;write db.%Save()
+    ;Set db=##Class(SYS.Database).%OpenId("irislib")
+    ;set db.ReadOnly=0
+    ;write !,"set ReadOnly=0 "
+    ;write db.%Save()
 
-if $zf(-1,"echo ':!tail /usr/irissys/mgr/messages.log' >> ~/.iris_history")
+    if $zf(-1,"echo ':!tail /usr/irissys/mgr/messages.log' >> ~/.iris_history")
 
-zn "USER"
-zpm "load /opt/irisapp/ -v":1
+    zn "USER"
+    zpm "load /opt/irisapp/ -v":1
+    zpm "install swagger-ui"
 
 halt
