@@ -5,6 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
 #    restart: always
+    hostname: widgets-director
+    container_name: widgets-director-iris
     ports:
       - 51883:1972
       - 52883:52773

@@ -8,7 +8,7 @@ Parameter ADAPTER = "EnsLib.SQL.InboundAdapter";
 
 Method OnProcessInput(pInput As EnsLib.SQL.Snapshot, Output pOutput As %RegisteredObject) As %Status
 {
-    set tMessage = ##class(Messages.LanguageRequest).%New()
+    set tMessage = ##class(WidgetsDirector.Messages.LanguageRequest).%New()
     set tMessage.textSample=pInput.Description
     set tMessage.ticketId=pInput.TicketId
     Set tSC = ..SendRequestAsync("FrenchRouter", tMessage)	

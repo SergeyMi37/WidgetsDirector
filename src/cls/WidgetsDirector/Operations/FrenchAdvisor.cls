@@ -1,11 +1,11 @@
-Class Operations.FrenchAdvisor Extends Ens.BusinessOperation
+Class WidgetsDirector.Operations.FrenchAdvisor Extends Ens.BusinessOperation
 {
 
 Parameter ADAPTER = "EnsLib.File.OutboundAdapter";
 
 Parameter INVOCATION = "Queue";
 
-Method UpdateAdvisor(pRequest As Messages.AdvisorUpdate, Output pResponse As Ens.Response) As %Status
+Method UpdateAdvisor(pRequest As WidgetsDirector.Messages.AdvisorUpdate, Output pResponse As Ens.Response) As %Status
 {
 	
     set ticket = pRequest.ticketId
@@ -18,7 +18,7 @@ Method UpdateAdvisor(pRequest As Messages.AdvisorUpdate, Output pResponse As Ens
 XData MessageMap
 {
 <MapItems>
-  <MapItem MessageType="Messages.AdvisorUpdate">
+  <MapItem MessageType="WidgetsDirector.Messages.AdvisorUpdate">
     <Method>UpdateAdvisor</Method>
   </MapItem>
 </MapItems>
